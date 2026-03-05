@@ -1,0 +1,20 @@
+# Guessing Game
+say "Welcome to the number guessing game!"
+say "I'm thinking of a number between 1 and 100."
+
+set secret to random number between 1 and 100
+set guesses to 0
+set won to false
+
+repeat while won is false:
+    ask "Your guess: " and store in guess_text
+    set guess to convert guess_text to number
+    set guesses to guesses + 1
+
+    if guess is less than secret:
+        say "Too low! Try higher."
+    otherwise if guess is greater than secret:
+        say "Too high! Try lower."
+    otherwise:
+        set won to true
+        say "Correct! You got it in " + guesses + " guesses!"

@@ -1,0 +1,11 @@
+# Hello World in Blossom
+say "Hello, World!"
+
+# Ask the user for their name
+ask "What is your name? " and store in name
+say "Nice to meet you, " + name + "!"
+
+# Do some simple math
+set age to 16
+set years_to_drive to 18 - age
+say "You can drive in " + years_to_drive + " years!"

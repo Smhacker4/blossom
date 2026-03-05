@@ -1,0 +1,14 @@
+# FizzBuzz - a classic programming challenge
+say "FizzBuzz from 1 to 30:"
+
+set i to 1
+repeat while i is at most 30:
+    if i % 15 is 0:
+        say "FizzBuzz"
+    otherwise if i % 3 is 0:
+        say "Fizz"
+    otherwise if i % 5 is 0:
+        say "Buzz"
+    otherwise:
+        say i
+    set i to i + 1

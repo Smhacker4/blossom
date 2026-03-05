@@ -1,0 +1,22 @@
+# Working with lists in Blossom
+make a list called fruits with "apple", "banana", "cherry"
+
+say "My fruits:"
+for each fruit in fruits:
+    say "  - " + fruit
+
+say "I have " + length of fruits + " fruits."
+
+add "mango" to fruits
+say "After adding mango: " + length of fruits + " fruits."
+
+# Access by position (starts at 1)
+say "First fruit: " + fruits at 1
+say "Last fruit: " + fruits at 4
+
+# Check if list contains something
+if fruits contains "banana":
+    say "Yes, I have bananas!"
+
+remove "banana" from fruits
+say "After removing banana: " + length of fruits + " fruits."

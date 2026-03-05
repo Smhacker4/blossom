@@ -1,0 +1,37 @@
+# Functions in Blossom
+
+# A simple greeting function
+define greet with name:
+    say "Hello, " + name + "! Welcome to Blossom."
+
+call greet with "Alice"
+call greet with "Bob"
+
+# A function that returns a value
+define sum with a, b:
+    give back a + b
+
+set result to call sum with 10, 25
+say "10 + 25 = " + result
+
+# Check if a number is even
+define is_even with n:
+    if n % 2 is 0:
+        give back true
+    otherwise:
+        give back false
+
+set num to 42
+if call is_even with num:
+    say convert num to text + " is even."
+otherwise:
+    say convert num to text + " is odd."
+
+# Factorial using recursion
+define factorial with n:
+    if n is at most 1:
+        give back 1
+    give back n * call factorial with n - 1
+
+say "5! = " + call factorial with 5
+say "10! = " + call factorial with 10
