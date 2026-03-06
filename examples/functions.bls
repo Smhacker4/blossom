@@ -15,10 +15,11 @@ set result to call sum with 10, 25
 say "10 + 25 = " + result
 
 # Check if a number is even
-define is_even with n:
-    if n % 2 is 0:
+# Use then or a colon (:)
+define is_even with n then
+    if n % 2 is 0 then
         give back true
-    otherwise:
+    otherwise then
         give back false
 
 set num to 42
@@ -32,6 +33,14 @@ define factorial with n:
     if n is at most 1:
         give back 1
     give back n * call factorial with n - 1
+
+# You can also use 'then' instead of a colon (:)
+set x to 0
+
+if x is 0 then
+    print "x is zero"
+otherwise then
+    print "x is not zero"
 
 say "5! = " + call factorial with 5
 say "10! = " + call factorial with 10
