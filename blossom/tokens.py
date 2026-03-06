@@ -57,6 +57,7 @@ class TT(Enum):
     REMOVE = auto()
     FROM = auto()
     NOTHING = auto()
+    THEN = auto()
 
     # Operators
     PLUS = auto()
@@ -126,6 +127,7 @@ KEYWORDS = {
     'remove': TT.REMOVE,
     'from': TT.FROM,
     'nothing': TT.NOTHING,
+    'then': TT.THEN,
 }
 
 

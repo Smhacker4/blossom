@@ -87,7 +87,18 @@ class Parser:
     # ── Block ─────────────────────────────────────────────────────────────────
 
     def parse_block(self) -> list:
-        self.consume(TT.COLON)
+        """Here I'm just making it so that even if the user uses the colon, it can still be accepted"""
+        if self.check(TT.COLON):
+            self.consume(TT.COLON)
+        elif self.check(TT.THEN):
+            self.consume(TT.THEN)
+        else:
+            """
+            I have no idea how to give errors the way you did yet, still insepecting
+            If you want you can just add here: 
+            'Expected a colon (:) or "then", maybe you forgot to add it to your if statment at line (line)'
+            """
+            return
         self.skip_newlines()
         self.consume(TT.INDENT)
         stmts = []

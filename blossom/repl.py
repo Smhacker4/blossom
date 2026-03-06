@@ -55,7 +55,12 @@ def run_repl():
 
         # Track indentation to know when a block is complete
         stripped = line.strip()
-        if stripped.endswith(':'):
+        lower = stripped.lower()
+        """
+        Made it so that even if user types in capslock e.g. THEN or Then or ThEn, it is still recognized and accepted
+        I kept stripped for the colon though because that doesn't change when you convert it to lowercase.
+        """
+        if stripped.endswith(':') or lower.endswith(' then'):
             indent_level += 1
             continue
 
